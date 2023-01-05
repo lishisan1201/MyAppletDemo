@@ -1,0 +1,7 @@
+<!--pages/mine/mine.wxml-->
+
+<text class="mine-view">我的界面</text>
+<navigator open-type="navigateBack" delta="1">返回上一界面</navigator> 
+<van-button type="primary">主要按钮</van-button>
+<van-button disabled type="primary">禁用状态</van-button>
+<van-button loading type="info" loading-text="加载中..." />

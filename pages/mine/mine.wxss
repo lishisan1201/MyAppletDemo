@@ -1,0 +1,4 @@
+/* pages/mine/mine.wxss */
+mine-view{
+  background-color: var(--botton-text);
+}

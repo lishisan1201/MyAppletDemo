@@ -1,5 +1,13 @@
 <!--index.wxml-->
 <view class="container">
+  <!-- 页面跳转 -->
+  <!-- 声明式导航 -->
+  <navigator url="/pages/mine/mine" open-type="switchTab">导航到我的界面</navigator>
+  <navigator url="/pages/logs/logs">跳转到非导航栏界面</navigator>
+  <!-- 编程式导航 -->
+  <button type="primary" bindtap="onJumoMine">跳转-我的</button>
+  <button type="primary" bindtap="onJumpMessage">跳转-消息</button>
+  
   <view class="userinfo">
     <block wx:if="{{canIUseOpenData}}">
       <view class="userinfo-avatar" bindtap="bindViewTap">
@@ -11,13 +19,14 @@
       <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
       <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
       <view wx:else> 请使用1.4.4及以上版本基础库 </view>
+      <view style="height: 100%; width: 100%; background-color: aqua;"></view>
     </block>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <text class="userinfo-nickname red">{{userInfo.nickName}}</text>
     </block>
   </view>
   <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+    <text style="text-align: center;" class="user-motto" bindtap="toMain">{{motto}}</text>
   </view>
 </view>

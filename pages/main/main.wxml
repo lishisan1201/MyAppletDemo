@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view>其他界面</view>
+<view class="container">
+  <view class="userinfo">
+    <block wx:if="{{canIUseOpenData}}">
+      <view class="userinfo-avatar" bindtap="bindViewTap">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <open-data type="userNickName"></open-data>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>     
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text style="background-color: #00ffff;text-align: center;" class="user-motto" bindtap="toMain">{{motto}}</text>
+  </view>
+</view>

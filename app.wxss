@@ -8,3 +8,15 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+.container navigator {
+  margin-top: 10rpx;
+}
+
+.container button {
+  margin-top: 10rpx;
+}
+
+page{
+  --botton-text:#ff00ff;
+}
